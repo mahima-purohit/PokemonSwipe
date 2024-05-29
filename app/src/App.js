@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import WelcomeScreen from './components/WelcomeScreen.js';
-import PokeApiLogo from './components/PokeApiLogo.js';
 import PokemonSlider from './components/PokemonSlider.js';
 import LikedPokemon from './components/LikedPokemon.js';
 import {
