@@ -1,0 +1,253 @@
+/* src/App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.welcome-screen,
+.pokemon-slider {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.welcome-screen,
+.pokemon-slider,
+.liked-pokemon-grid {
+  text-align: center;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+.card,
+.pokemon-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  font-family: cursive;
+  z-index: 3;
+}
+.overlapping-card2 {
+  background-color: transparent;
+  margin-top: -20px;
+  margin-left: 25px;
+  width: 70%;
+  z-index: 1;
+  border-top: none;
+}
+
+.overlapping-card1 {
+  background-color: transparent;
+  /* border: 1px solid #ccc; */
+  margin-top: -20px;
+  margin-left: 10px;
+  width: 80%;
+  z-index: 2;
+}
+
+.dark .card,
+.dark .pokemon-card {
+  background: #444;
+}
+
+button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.toggle-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.pokemon-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin-top: 10px;
+}
+
+.pokemon-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+.pokemon-card h2 {
+  text-transform: capitalize;
+}
+
+.abilities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.abilities ul {
+  list-style-type: none;
+  padding: 0;
+}
+.abilities-half {
+  width: 30%;
+  border-radius: 10px;
+}
+.abilities-half.yellow {
+  background-color: orange;
+}
+.abilities-half.red {
+  background-color: lightblue;
+}
+
+.abilities li {
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.likeButton {
+  width: 40%;
+  background-color: pink;
+  font-family: cursive;
+  font-weight: bolder;
+  color: black;
+  font-size: 20px;
+}
+.dislikeButton {
+  width: 40%;
+  background-color: green;
+  font-family: cursive;
+  font-weight: bolder;
+  color: black;
+  font-size: 20px;
+}
+.liked-pokemon-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.liked-pokemon-grid .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.liked-pokemon-grid .pokemon-card {
+  margin: 10px;
+  max-width: 100%; /* Ensure the card does not exceed its container */
+}
+
+.dark .liked-pokemon-grid .pokemon-card {
+  background: #444; /* Ensure dark mode styling applies to cards */
+}
+
+.linkText {
+  color: orange;
+  width: fit-content;
+}
